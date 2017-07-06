@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    find_group_and_check_permission
+
   end
 
   def create
@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    find_group_and_check_permission
+
 
     @group.update(group_params)
       redirect_to groups_path, notice: "上传成功"
@@ -40,7 +40,7 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    find_group_and_check_permission
+
 
     @group.destroy
     flash[:alert] = "Group deleted"
